@@ -120,8 +120,13 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="LOGIN"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="mxD-eV-wjY" kind="show" id="i2K-F9-Dii"/>
+                                            <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJK-ZY-0Xg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -140,6 +145,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="tintColor" red="0.0" green="0.63689178229999999" blue="0.61417478319999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Sign up here"/>
+                                        <connections>
+                                            <action selector="signupAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rtp-xM-em6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -166,6 +174,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Pve-aR-nKc"/>
+                    <connections>
+                        <outlet property="SignUpButton" destination="5fq-D6-8MC" id="2r5-Kq-fRb"/>
+                        <outlet property="dontHaveAccountLabel" destination="Mua-Io-Mtr" id="d89-FU-2qi"/>
+                        <outlet property="emailLineView" destination="879-h4-bIS" id="55T-vm-d4R"/>
+                        <outlet property="emailText" destination="L3F-hA-OWX" id="ZUk-Wh-Opx"/>
+                        <outlet property="envelopeImage" destination="5Fo-NX-Kql" id="1LV-SF-ayH"/>
+                        <outlet property="lockImage" destination="cxS-TI-dP0" id="35v-ca-SW0"/>
+                        <outlet property="loginButton" destination="NYh-XH-ECv" id="zak-nm-TW5"/>
+                        <outlet property="passwordLineView" destination="fq0-WA-gVk" id="Ai3-cH-pKR"/>
+                        <outlet property="passwordText" destination="UG8-v1-Yds" id="FiJ-nD-75F"/>
+                        <outlet property="signUpButton" destination="5fq-D6-8MC" id="00J-v9-Orz"/>
+                        <segue destination="mxD-eV-wjY" kind="show" identifier="goToHomePage" id="FBe-AT-ezR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
