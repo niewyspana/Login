@@ -9,14 +9,38 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var emailLineView: UIView!
+    @IBOutlet weak var emailText: UITextField!
+    @IBOutlet weak var envelopeImage: UIImageView!
+    @IBOutlet weak var passwordLineView: UIView!
+    @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet weak var lockImage: UIImageView!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var dontHaveAccountLabel: UILabel!
     
+    //MARK: -IBActions
+    
+    @IBAction func loginAction(_ sender: Any) {
+      performSegue(withIdentifier: "goToHomePage", sender: sender)
+    }
+    
+    @IBAction func signupAction(_ sender: Any) {
+        print("Sign Up")
+    }
+    // MARK: -Private methods
+    private func setupLoginButton() {
+        loginButton.layer.shadowColor = (UIColor(named: "newColor") ?? UIColor.gray).cgColor
+        loginButton.layer.shadowOffset = CGSize(width: 0, height: 8)
+        loginButton.layer.shadowOpacity = 0.4
+        loginButton.layer.shadowRadius = 8
+    }
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        print("viewDidLoad")
+        
+        setupLoginButton()
     }
 }
   
