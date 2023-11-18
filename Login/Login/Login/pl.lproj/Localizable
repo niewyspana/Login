@@ -1,0 +1,11 @@
+/* 
+  Localizable
+  Login
+
+  Created by Viki on 18/11/2023.
+  
+*/
+
+"Error" = "Błąd";
+"Wrong password or e-mail" = "Nieprawidłowe hasło albo mail";
+"OK" = "OK";
