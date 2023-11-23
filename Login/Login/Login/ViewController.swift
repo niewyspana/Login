@@ -54,7 +54,7 @@ class ViewController: UIViewController {
            password == mockPassword {
             performSegue(withIdentifier: "goToHomePage", sender: sender)
         } else {
-            let alert = UIAlertController(title: "Error".localized, message: "Wrong password or e-mail".localized, preferredStyle: .alert)
+            let alert = UIAlertController(title: "Error_message".localized, message: "Wrong_password_or_e-mail".localized, preferredStyle: .alert)
             
             let action = UIAlertAction(title: "OK".localized, style: .default)
             alert.addAction(action)
