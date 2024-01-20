@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var dontHaveAccountLabel: UILabel!
     
     // MARK: - Properties
+    var isLogin = true
     private let activeColor = UIColor(named: "newColor") ?? UIColor.gray
     private var email: String = "" {
         didSet{
@@ -50,8 +51,9 @@ class ViewController: UIViewController {
             makeErrorField(textField: passwordText)
         }
         
-        if email == mockEmail,
-           password == mockPassword {
+        if isLogin {
+        
+            if KeychainManager.checkUser(with: email, password: password) {
             performSegue(withIdentifier: "goToHomePage", sender: sender)
         } else {
             let alert = UIAlertController(title: "Error_message".localized, message: "Wrong_password_or_e-mail".localized, preferredStyle: .alert)
@@ -61,10 +63,19 @@ class ViewController: UIViewController {
             
             present(alert, animated: true)
         }
+        } else {
+            if KeychainManager.save(email: email, password: password) {
+                performSegue(withIdentifier: "goToHomePage", sender: sender)
+            } else {
+                debugPrint("Error with saving email and password")
+            }
+        }
     }
     
     @IBAction func signupAction(_ sender: Any) {
-        print("Sign Up")
+        guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
+        viewController.isLogin = false
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     // MARK: -Private methods
@@ -76,12 +87,16 @@ class ViewController: UIViewController {
         
         loginButton.isUserInteractionEnabled = false
         loginButton.backgroundColor = .systemGray5
+        
+        loginButton.setTitle(isLogin ? "Login".localized.uppercased() : "Register".localized.uppercased(), for: .normal)
     }
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        dontHaveAccountLabel.isHidden = !isLogin
+        signUpButton.isHidden = !isLogin
         setupLoginButton()
         
         emailText.delegate = self

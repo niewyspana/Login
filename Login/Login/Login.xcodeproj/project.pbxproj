@@ -14,6 +14,7 @@
 		3809E0C12B0010BF00DB6814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3809E0C02B0010BF00DB6814 /* Assets.xcassets */; };
 		3809E0C42B0010BF00DB6814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3809E0C22B0010BF00DB6814 /* LaunchScreen.storyboard */; };
 		383426382B0FD72C00D314E1 /* Localizable in Resources */ = {isa = PBXBuildFile; fileRef = 383426362B0FD72C00D314E1 /* Localizable */; };
+		3837B61E2B5C7D870070BE11 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3837B61D2B5C7D870070BE11 /* KeyChainManager.swift */; };
 		38B905C72B0175B20065DBBF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B905C62B0175B20065DBBF /* SecondViewController.swift */; };
 		38B905D72B0944D60065DBBF /* String+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B905D62B0944D60065DBBF /* String+ex.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		383426342B0FD6B900D314E1 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
 		383426352B0FD6B900D314E1 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		383426372B0FD72C00D314E1 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text; name = pl; path = pl.lproj/Localizable; sourceTree = "<group>"; };
+		3837B61D2B5C7D870070BE11 /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		38B905C62B0175B20065DBBF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		38B905D62B0944D60065DBBF /* String+ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 				3809E0B72B0010BE00DB6814 /* AppDelegate.swift */,
 				3809E0B92B0010BE00DB6814 /* SceneDelegate.swift */,
 				3809E0BB2B0010BE00DB6814 /* ViewController.swift */,
+				3837B61D2B5C7D870070BE11 /* KeyChainManager.swift */,
 				38B905C62B0175B20065DBBF /* SecondViewController.swift */,
 				38B905D62B0944D60065DBBF /* String+ex.swift */,
 				3809E0BD2B0010BE00DB6814 /* Main.storyboard */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38B905C72B0175B20065DBBF /* SecondViewController.swift in Sources */,
+				3837B61E2B5C7D870070BE11 /* KeyChainManager.swift in Sources */,
 				38B905D72B0944D60065DBBF /* String+ex.swift in Sources */,
 				3809E0BC2B0010BE00DB6814 /* ViewController.swift in Sources */,
 				3809E0B82B0010BE00DB6814 /* AppDelegate.swift in Sources */,
